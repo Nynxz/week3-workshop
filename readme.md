@@ -7,3 +7,17 @@ the client based on the result.
 In future weeks we will continue with the development of the express based server but
 we will changeup the tool for creating the client side to Angular so that we can create
 dynamic web apps.
+
+
+
+--- 
+Running the project
+```
+git clone https://github.com/Nynxz/week3-workshop
+
+cd week3-workshop
+
+npm install
+
+npm start
+```
