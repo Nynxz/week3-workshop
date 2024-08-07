@@ -9,6 +9,7 @@ module.exports = {
 
     constructor() {
       this.app = express();
+      this.app.use(express.static(__dirname + "/www"));
       this.config = config.config();
       this._loadRoutes();
     }
@@ -20,8 +21,8 @@ module.exports = {
     }
 
     _loadRoutes() {
-      this._loadRoute("/", "./routes/home.js");
-      this._loadRoute("/test", "./routes/test.js");
+      this._loadRoute("/", "./routes/home.jsx");
+      this._loadRoute("/test", "./routes/test.jsx");
     }
 
     _loadRoute(route, routefile) {
