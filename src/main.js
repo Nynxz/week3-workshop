@@ -1,4 +1,4 @@
-const Gateway = require("./gateway.js");
-
-const gateway = new Gateway.Gateway();
+import { Gateway } from "./gateway.js";
+const gateway = new Gateway();
+gateway.loadRoutes();
 gateway.start();

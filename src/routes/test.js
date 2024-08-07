@@ -1,5 +1,13 @@
-module.exports = {
-  route: (app, req, res) => {
-    res.sendFile("./src/www/test.html", { root: "./" });
-  },
+import { registerHTTP } from "../lib/registerHTTP.js";
+import { resolve } from "path";
+
+export default (router, gateway) => {
+  registerHTTP("get", "/test", router, (req, res) => {
+    let fp = resolve("./src/www/test.html");
+    res.sendFile(fp);
+  });
+
+  registerHTTP("post", "/api/login", router, (req, res) => {
+    res.send("Success!");
+  });
 };

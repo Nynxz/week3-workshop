@@ -1,7 +1,5 @@
-module.exports = {
-  config: () => {
-    return {
-      PORT: 3000,
-    };
-  },
-};
+export function config() {
+  return {
+    PORT: 3000,
+  };
+}
