@@ -11,6 +11,8 @@ export class Gateway {
   constructor() {
     this.app = express();
     this.router = express.Router();
+    this.app.use(express.urlencoded({ extended: true }));
+    this.app.use(express.json());
     this.app.use(express.static("./src/www"));
     this.config = config();
   }

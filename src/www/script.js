@@ -6,7 +6,7 @@ $("#loginForm").on("submit", function (event) {
   event.preventDefault();
 
   // Send the data using post
-  var req = $.post("/api/login");
+  var req = $.post("/api/login", $("#loginForm").serialize());
 
   // Put the results in a div
   req.done(function (data) {

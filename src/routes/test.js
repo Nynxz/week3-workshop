@@ -1,3 +1,4 @@
+import { findUser } from "../db/dummyusers.js";
 import { registerHTTP } from "../lib/registerHTTP.js";
 import { resolve } from "path";
 
@@ -8,7 +9,12 @@ export default (router, gateway) => {
   });
 
   registerHTTP("post", "/api/login", router, (req, res) => {
-    console.log("User Is Logging In!");
-    res.send("Success!!!");
+    console.log(req.body);
+    const user = findUser(req.body.email, req.body.password);
+    if (user) {
+      res.send("Login Success! Hello " + user.name);
+    } else {
+      res.send("Failure!");
+    }
   });
 };
