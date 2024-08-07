@@ -6,6 +6,7 @@
     <title>Home Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   </head>
   <body>
     <div
@@ -25,13 +26,20 @@
         background: abb2bf;
         border-radius: 16px;
         padding: 5px;
+        max-width: 50%;
+        margin: auto;
+        text-align: center;
       "
     >
-      Login Form
-
-      <form>
-        
+      <form class="login-form" action="/" id="loginForm">
+        Email
+        <div><input type="text" /></div>
+        Password
+        <div><input type="text" /></div>
+        <input class="login-button" type="submit" value="Login" />
       </form>
+      <div id="result"></div>
     </div>
   </body>
+  <script src="script.js"></script>
 </html>

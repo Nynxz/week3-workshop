@@ -8,6 +8,7 @@ export default (router, gateway) => {
   });
 
   registerHTTP("post", "/api/login", router, (req, res) => {
-    res.send("Success!");
+    console.log("User Is Logging In!");
+    res.send("Success!!!");
   });
 };

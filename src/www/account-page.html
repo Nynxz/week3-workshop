@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Account</title>
+    <title>Home Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
   </head>
@@ -14,9 +14,36 @@
         background: abb2bf;
         border-radius: 16px;
         padding: 5px;
+        margin-bottom: 5px;
       "
     >
       Account Page
+    </div>
+    <div
+      style="
+        border: 1px solid black;
+        background: abb2bf;
+        border-radius: 16px;
+        padding: 5px;
+        max-width: 50%;
+        margin: auto;
+        text-align: center;
+      "
+    >
+      <div class="login-form">
+        <h2>Account Information</h2>
+        <img
+          class="profile-logo"
+          src="https://i0.wp.com/blogs.griffith.edu.au/wp-content/uploads/2017/09/griffith-logo.png?ssl=1"
+        />
+        <div>
+          Email
+          <div>
+            <input type="text" readonly value="this is your email :)" />
+          </div>
+          <a href="/"><button class="login-button">Logout</button></a>
+        </div>
+      </div>
     </div>
   </body>
 </html>
