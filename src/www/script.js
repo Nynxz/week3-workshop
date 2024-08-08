@@ -10,6 +10,15 @@ $("#loginForm").on("submit", function (event) {
 
   // Put the results in a div
   req.done(function (data) {
-    $("#result").empty().append(data);
+    console.log(data);
+    data = JSON.parse(data);
+    //https://stackoverflow.com/questions/10909630/jquery-change-css-class
+    if (!data.valid) {
+      $("#errormsg").removeClass("hidemessage");
+      $("#errormsg").addClass("showmessage");
+    } else {
+      $("#errormsg").removeClass("showmessage");
+      $("#errormsg").addClass("hidemessage");
+    }
   });
 });

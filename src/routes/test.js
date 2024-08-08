@@ -12,9 +12,9 @@ export default (router, gateway) => {
     console.log(req.body);
     const user = findUser(req.body.email, req.body.password);
     if (user) {
-      res.send("Login Success! Hello " + user.name);
+      res.send(JSON.stringify({ valid: true }));
     } else {
-      res.send("Failure!");
+      res.send(JSON.stringify({ valid: false }));
     }
   });
 };

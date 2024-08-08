@@ -15,10 +15,13 @@
         background: abb2bf;
         border-radius: 16px;
         padding: 5px;
+        display: flex;
+        justify-content: space-between;
         margin-bottom: 5px;
       "
     >
       Week 3 Website
+      <a href="/account">Account</a>
     </div>
     <div
       style="
@@ -38,7 +41,8 @@
         <div><input type="text" name="password" /></div>
         <input class="login-button" type="submit" value="Login" />
       </form>
-      <div id="result"></div>
+      <div id="errormsg" class="hidemessage">User credentials do not match</div>
+      <!-- <div id="result"></div> -->
     </div>
   </body>
   <script src="script.js"></script>

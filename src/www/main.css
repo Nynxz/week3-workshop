@@ -19,3 +19,12 @@ body {
   max-width: 128px;
   border-radius: 15px;
 }
+
+.hidemessage {
+  display: none;
+}
+
+.showmessage {
+  display: block;
+  color: red;
+}
